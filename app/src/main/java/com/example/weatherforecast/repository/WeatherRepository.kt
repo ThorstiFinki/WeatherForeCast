@@ -2,7 +2,7 @@ package com.example.weatherforecast.repository
 
 import com.example.weatherforecast.data.DataOrException
 import com.example.weatherforecast.model.Weather
-import com.example.weatherforecast.network.WeatherAPI
+import com.example.weatherforecast.repository.network.WeatherAPI
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(private val api: WeatherAPI) {

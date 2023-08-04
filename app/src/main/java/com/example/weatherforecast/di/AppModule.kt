@@ -1,7 +1,7 @@
 package com.example.weatherforecast.di
 
 import com.example.weatherforecast.model.Weather
-import com.example.weatherforecast.network.WeatherAPI
+import com.example.weatherforecast.repository.network.WeatherAPI
 import com.example.weatherforecast.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -17,7 +17,7 @@ import javax.inject.Singleton
 class AppModule {
     @Provides
     @Singleton
-    fun provideOpenWeatherApi(): WeatherAPI{
+    fun provideOpenWeatherApi(): WeatherAPI {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
