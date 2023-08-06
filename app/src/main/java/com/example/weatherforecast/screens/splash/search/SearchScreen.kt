@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.weatherforecast.screens.search
+package com.example.weatherforecast.screens.splash.search
 
 import android.annotation.SuppressLint
 import android.util.Log
