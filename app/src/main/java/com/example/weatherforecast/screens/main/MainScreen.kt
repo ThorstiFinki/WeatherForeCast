@@ -76,7 +76,7 @@ fun MainScaffold(weather: Weather, navController: NavController) {
     Scaffold(topBar = {
         WeatherAppBar(
             title = weather.city.name + " ,${weather.city.country}",
-            icon = Icons.Default.ArrowBack,
+            //icon = Icons.Default.ArrowBack,
             navController = navController,
             onActionClicked = {
                               navController.navigate(WeatherScreens.SearchScreen.name)
