@@ -31,7 +31,7 @@ import com.example.weatherforecast.screens.main.WeatherStateImage
 
 
 @Composable
-fun HumidityWindPressureRow(weather: WeatherItem){
+fun HumidityWindPressureRow(weather: WeatherItem, isMetric: Boolean){
     Row(modifier = Modifier
         .padding(12.dp)
         .fillMaxWidth(),
@@ -55,7 +55,8 @@ fun HumidityWindPressureRow(weather: WeatherItem){
             Icon(painter = painterResource(id = R.drawable.wind),
                 contentDescription = "wind Icon",
                 modifier = Modifier.size(20.dp))
-            Text(text = "${weather.speed}m/h", style = MaterialTheme.typography.titleSmall)
+            Text(text = "${weather.speed}" + if (isMetric) "m/s" else "mph",
+                style = MaterialTheme.typography.titleSmall)
         }
 
     }
